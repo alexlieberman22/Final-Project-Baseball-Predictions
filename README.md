@@ -1,4 +1,4 @@
-# Final-project: Baseball Predictions Scores
+# Final-project: NBA Predictions
 
 ### Why we selected topic
 Interest in sports betting is growing and using machine learning to predict the results of games will help in sports betting. 
