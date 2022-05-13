@@ -130,3 +130,6 @@ dmypy.json
 
 # Add config
 config.py
+
+# Add basketball.sqlite
+basketball.sqlite
