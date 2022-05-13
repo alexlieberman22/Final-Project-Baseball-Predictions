@@ -81,6 +81,9 @@ target/
 profile_default/
 ipython_config.py
 
+# Add basketball.sqlite
+basketball.sqlite
+
 # pyenv
 .python-version
 
@@ -131,5 +134,4 @@ dmypy.json
 # Add config
 config.py
 
-# Add basketball.sqlite
-basketball.sqlite
+
