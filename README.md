@@ -23,3 +23,4 @@ Our goal is to achieve an accuracy score of higher than 50%.
 
 - Team slack channel
 - Meeting at 7 pm Monday-Thursday
+

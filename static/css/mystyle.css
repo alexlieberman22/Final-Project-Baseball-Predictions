@@ -1,12 +1,15 @@
 body {
   font-family: "Lato", sans-serif;
+  background-image: url("../images/basketball-hardwood-court-floor.jpg");
+  background-size: 300px;
+  background-repeat: None;
 }
 
 .sidenav {
   width: 200px;
   position: fixed;
   z-index: 1;
-  top: 50px;
+  top: 10px;
   left: 10px;
   background: #eee;
   overflow-x: hidden;
@@ -28,9 +31,28 @@ body {
 .title {
         justify-content: center;
         text-align: center;
+        padding-bottom: 100px;
+        background-color: None;
+        color: blue;
 }
 .container {
     font-size: 18px; /* Increased text to enable scrolling */
+    margin-left: 100px;
+    
+}
+
+.row{
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+.form-select {
+  width: auto;
+}
+
+.button {
+  text-align: center;
+  background-color: #064579;
 }
 
 @media screen and (max-height: 450px) {

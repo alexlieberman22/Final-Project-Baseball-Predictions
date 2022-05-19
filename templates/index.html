@@ -16,19 +16,14 @@
         <h1>NBA Prediction</h1> 
     </div>
     
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-2">
+    <div class="container" width="">
                 <div class="sidenav">
                     <a href="#introduction">Introduction</a>
                     <a href="#ml-model">Machine Learning Model</a>
                     <a href="#visuals">Visualization</a>
                     <a href="#prediction">Predictions</a>
                 </div>
-            </div>
-
-            <div class="col-md-10">
+            <div class="container">
                 <div class="row">
                     <h2 id="introduction">
                         Introduction
@@ -39,7 +34,7 @@
                 </div>
 
                 <div class="row">
-                    <h2 id="ml_model">
+                    <h2 id="ml-model">
                         Machine Learning Model
                     </h2>
                     <p>
@@ -51,29 +46,74 @@
                     <h2 id="visuals">
                         Visualization
                     </h2>
-                    <p>
-                        some visuals here
-                    </p>
+                    <div class='tableauPlaceholder' id='viz1652823119737' style='position: relative'>
+                        <noscript><a href='#'>
+                        <img alt='Story 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NB&#47;NBAtests&#47;Story1&#47;1_rss.png' style='border: none' /></a>
+                        </noscript>
+                        <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                            <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                            <param name='name' value='NBAtests&#47;Story1' /><param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NB&#47;NBAtests&#47;Story1&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                        </object>
+                    </div>    
+                    <script type='text/javascript'>
+                        var divElement = document.getElementById('viz1652823119737');
+                        var vizElement = divElement.getElementsByTagName('object')[0];
+                        vizElement.style.minWidth='750px';
+                        vizElement.style.maxWidth='1050px';
+                        vizElement.style.width='100%';
+                        vizElement.style.minHeight='819px';
+                        vizElement.style.maxHeight='1119px';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                        var scriptElement = document.createElement('script');
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    </script>
+
                 </div>
 
                 <div class="row">
                     <h2 id="prediction">
                         Predictions
                     </h2>
-                    <p>
-                        some predictions here
-                    </p>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Make Prediction</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                    <p>currently testing how to make RESTful api</p>
+                    <form action="/result" method="POST"> 
+                        <select class="form-select" id="number1">
+                            <option selected>Choose first number to add</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+
+                        </select>
+
+                        <select class="form-select" id="number2">
+                            <option selected>Choose second number to add</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        
+                        <div class="button">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form> 
+                    
+                    <p>{{prediction}}</p>
+
                 </div>
             </div>
 
-        </div>
+    
         
+    </div>
+    <div class="footnotes">
+        <a href='https://www.freepik.com/photos/basketball-ball'>Basketball ball photo created by master1305 - www.freepik.com</a>
     </div>
 </body>
 </html>
