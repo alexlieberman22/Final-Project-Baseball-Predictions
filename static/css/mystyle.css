@@ -1,7 +1,8 @@
 body {
   font-family: "Lato", sans-serif;
-  background-image: url("https://img.freepik.com/free-photo/basketball-hardwood-court-floor_155003-8050.jpg");
-  
+  background-image: url("../images/basketball-hardwood-court-floor.jpg");
+  background-size: 300px;
+  background-repeat: None;
 }
 
 .sidenav {
@@ -30,7 +31,7 @@ body {
 .title {
         justify-content: center;
         text-align: center;
-        padding-bottom: 300px;
+        padding-bottom: 100px;
         background-color: None;
         color: blue;
 }
@@ -51,13 +52,7 @@ body {
 
 .button {
   text-align: center;
-}
-
-.mybtn{
   background-color: #064579;
-  width: auto;
-  text-align: center;
-  color: white;
 }
 
 @media screen and (max-height: 450px) {
