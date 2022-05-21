@@ -40,7 +40,13 @@ Our goal is to achieve an accuracy score of higher than 50%.
 
 - The model building process began with using the csv files exported by the sql databases.
 - The first part was creating a usable dataframe
-- [insert picture of before and after of the dataframes to show the seasonalization of the data]
+
+![image](https://user-images.githubusercontent.com/71575748/169663523-f76f4c55-050d-4d41-a691-5b72f3042aa6.png)
+
+  - This was made from using groupme to merge the rows into averages for each season based on the team groups.
+
+#### The process goes as follows:
+
 - The use of the loc function was used to breakdown each season into its own dataframe and fed into a list of dataframes.
 - Each dataframe was fed through a function tasked with processing them to aquire season averages for features such as 2 or 3 pointer shot averages to average number of rebounds or assists throughout the season.
 - A sum of games won was also made from the different frames however this is going to be the target for the linear regression model and the OLS model
@@ -68,9 +74,17 @@ Our goal is to achieve an accuracy score of higher than 50%.
 - A variable for playoffs was made and filled with 0s as a default
 - Using the 'if in' test, we were able to check which teams made the playoffs for what years using the combined columns as so.
 
+![image](https://user-images.githubusercontent.com/71575748/169663581-d54a75fc-ba56-4176-bf8e-190044e07ca3.png)
 
 - If the team and year combination existed in the playoff dataset the playoffs column would be fill with a 1 for that index.
 - This creates our target variable to check if the team made the playoffs for that particular season
 - The data was split into training and testing sets.
 - Using classes and functions, the process of fitting the model and getting the accuracy, recall, and precision scores.
+- This culminated into a dataframe sorted by accuracy scores. 
+- Accuracy is being used becasue there is not really a score more important to target like precision or recall.
 
+![image](https://user-images.githubusercontent.com/71575748/169663640-073727c1-df70-4b68-aa81-f4e477d5e40d.png)
+
+- Best model is the Logistic Regression Classifier model
+- Second best model is the Random Forest Classifier model
+- Third best model is the Tuned Bagging Classifier model
