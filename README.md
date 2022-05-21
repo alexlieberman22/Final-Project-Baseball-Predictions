@@ -6,7 +6,8 @@ Our goal is to achieve an accuracy score of higher than 50%.
 
 ### Source of data
 
-- [nba-games from kaggle](https://www.kaggle.com/nathanlauga/nba-games)
+- [nba-games from Kaggle by wyattowalsh](https://www.kaggle.com/wyattowalsh/basketball)
+- [nba-games from Kaggle by nathanlauga](https://www.kaggle.com/nathanlauga/nba-games)
 - fantasyData
 - espn
 - cbs sports
