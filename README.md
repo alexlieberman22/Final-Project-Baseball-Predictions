@@ -1,5 +1,4 @@
-# Final-project: NBA Predictions
-
+=======
 ### Why we selected topic:
 
 Interest in sports betting is growing and using machine learning to predict the results of games will help in sports betting. 
@@ -88,3 +87,4 @@ Our goal is to achieve an accuracy score of higher than 50%.
 - Best model is the Logistic Regression Classifier model
 - Second best model is the Random Forest Classifier model
 - Third best model is the Tuned Bagging Classifier model
+
