@@ -34,7 +34,7 @@ Our goal is to achieve an accuracy score of higher than 50%.
 
 ### Exporatory Data Analysis:
 
-- Alex, can you please send me a link to a tableau public version of your graphs so I can use snips of them.
+- Link to EDA [Alex's Tableau Public](https://public.tableau.com/app/profile/alex.lieberman/viz/NBAtests/Story1)
 
 ### The Model:
 
@@ -48,6 +48,9 @@ Our goal is to achieve an accuracy score of higher than 50%.
 - After getting the dataframes processed they were merged into a unified dataframe broken up by each season.
 - A dataframe was made from a csv file containing the seasonal attendance of each season for the teams.
 - the 2 frames were organized by team and year so they would align allowing for an easy merge into a unified dataframe.
+
+#### Linear Regression:
+
 - The dataframes were fed into a linear regression model and OLS model to predict the number of wins a team would get per season.
 
 ![image](https://user-images.githubusercontent.com/71575748/169635542-7759190c-11d1-4faf-b3fa-5ee74017aadf.png)
@@ -55,5 +58,19 @@ Our goal is to achieve an accuracy score of higher than 50%.
 - The OLS model showed more promise with a higher amount of error it could explain.
 - Due to the overlining of metrics such as the average accuracy of 3 pointers and 2 pointers the model has issues with multicolinearity
 - This is because a team that can hit 3s consitantly will be able to hit 2s and field goals often.
-- However, dropping the 2 column has a strong adverse effect, and doesn't cause an estimator to have a incorrect sign.
-- 
+- Notably, having the assist variable causes a decrease in win estimations.
+
+#### Classification Model - Predicting Playoff Makers:
+
+- The dataframe used for the linear regression model was saved and loaded again here.
+- Using the playoffs data the year was taken and decreased by 1 to get the proper season.
+- A string version of the date and team names were merged in both dataframes to see what teams were in the playoffs in each year.
+- A variable for playoffs was made and filled with 0s as a default
+- Using the 'if in' test, we were able to check which teams made the playoffs for what years using the combined columns as so.
+
+
+- If the team and year combination existed in the playoff dataset the playoffs column would be fill with a 1 for that index.
+- This creates our target variable to check if the team made the playoffs for that particular season
+- The data was split into training and testing sets.
+- Using classes and functions, the process of fitting the model and getting the accuracy, recall, and precision scores.
+
