@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction 1</title>
+    <title>predict 1</title>
+
+    <script src="../static/js/app.js"></script>
 
 </head>
 <body>
     <div class="row">
         <h3>
-            Add Numbers Form 
+            Add numbers
         </h3>
-        <form action="/predict_1" method="POST">
-            <label for="number1">Number 1:</label>
-            <input type="text" id="number1" name="number1">
-            <br>
-            <label for="number2">Number 2:</label>
-            <input type="text" id="number2" name="number2">
-            <br>
-        <input type="submit" value="Submit">
-        </form>
+        <br>
+        <label for="number_1">Choose number 1:</label>
+        <select id="number_1" name="number_1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select>
+        <br>
+        <label for="number_2">Choose number 2:</label>
+        <select id="number_2" name="number_2">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select>
+        <br>
+        <input type="text" id="prediction_1">
+        <br>
+        <button onclick=add_numbers() class='btn btn-info'>CLICK to Calculate</button>
     </div>
-    <h1> {{ prediction }}</h1>
-
-    <script src="../static/js/app.js"></script>
 </body>
 </html>

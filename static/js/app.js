@@ -1,6 +1,11 @@
 function add_numbers(){
-    let number1 = document.getElementById("number1").value;
-    let number2 = document.getElementById("number2").value;
+    var select_1 = document.getElementById('number_1');
+	var option_1 = select_1.options[select_1.selectedIndex];
+    var select_2 = document.getElementById('number_2');
+	var option_2 = select_2.options[select_2.selectedIndex];
+    let number1 = option_1.value;
+    let number2 = option_2.value;
+    
     console.log(number1);
     console.log(number2);
 
@@ -9,11 +14,14 @@ function add_numbers(){
         body: JSON.stringify({
             number1: number1,
             number2: number2
-        })
+        }),
+        headers : {
+            'Content-Type' : 'application/json'
+        }
     }).then(function (response) {
           return response.json();
       }).then(resp=>{
         console.log(resp);
-
+        document.getElementById('prediction_1').value = resp.prediction;
       });
 }
