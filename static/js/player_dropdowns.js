@@ -1,4 +1,5 @@
 
+
 // select to select
 function findPlayerSelect(selection){
   var players= document.getElementById('players');

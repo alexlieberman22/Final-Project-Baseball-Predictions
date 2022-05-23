@@ -14,11 +14,14 @@ def predict():
      # prediction = model.predict(query)
      # return jsonify({'prediction': list(prediction)})
  
-     number_1 = request.json.get("number1")
-     number_2 = request.json.get("number2")
-     output = number_1 + number_2
+     if request.method == 'POST':
+          my_dict = request.form.to_dict()
+          number1 = my_dict.get("number1")
+          number2 = my_dict.get("number2")
+          prediction = number1 + number2
+          
 
-     return render_template('predict_1.html', output=output)
+     return render_template('predict_1.html', prediction=prediction)
 
 if __name__ == '__main__':
      app.run(debug=True)
