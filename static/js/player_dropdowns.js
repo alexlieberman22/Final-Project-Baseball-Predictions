@@ -1,4 +1,5 @@
 
+
 // select to select
 function findPlayerSelect(selection){
   var players= document.getElementById('players');
@@ -7,7 +8,7 @@ function findPlayerSelect(selection){
   console.log(currentValue)
 
 
-  d3.json("../Resources/players.json").then((data) => {
+  d3.json("../static/Resources/players.json").then((data) => {
     console.log(data);
 
     var Hawks = data.Hawks;
