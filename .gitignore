@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Add config
+config.py
+
+# Add basketball.sqlite
+nba_data/Notebook/basketball.sqlite
