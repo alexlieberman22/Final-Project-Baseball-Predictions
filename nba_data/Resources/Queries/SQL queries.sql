@@ -1,14 +1,3 @@
-SELECT * FROM public."Regular_season_players";
-
-
-SELECT * FROM public."player_attributes";
-SELECT * FROM public."player_by_season";
-SELECT * FROM public."All_games";
-SELECT * FROM public."home_team_names";
-SELECT * FROM public."visitor_team_names";
-
-
-
 SELECT public."All_games"."GAME_DATE_EST",
 	public."All_games"."HOME_TEAM_ID",
 	public."All_games"."VISITOR_TEAM_ID",
@@ -78,17 +67,3 @@ INNER JOIN public."player_attributes"
 ON public."player_by_season"."PLAYER_NAME" = public."player_attributes"."PLAYER_NAME";
 
 SELECT * FROM public."regular_season_attributes";
-
-SELECT * FROM public."attendance_data";
-
-SELECT * FROM public."player_attributes";
-
-SELECT * FROM public."reg_season_games";
-
-SELECT * FROM public."player_by_season";
-
-
-
-
-
-
