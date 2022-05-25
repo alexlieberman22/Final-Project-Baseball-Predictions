@@ -22,42 +22,42 @@
 
     <div class="container" width="">
 
-            <select name="team" id="team">
+            <select name="team" id="team" onchange="autofill_inputs(this)">
                 <option hidden>NBA Team</option>
-                <option value="Atlanta Hawks">Atlanta Hawks</option>
-                <option value="Boston Celtics">Boston Celtics</option>
-                <option value="Brooklyn Nets">Brooklyn Nets</option>
-                <option value="Charlotte Hornets">Charlotte Hornets</option>
-                <option value="Chicago Bulls">Chicago Bulls</option>
-                <option value="Cleveland Cavaliers">Cleveland Cavaliers</option>
-                <option value="Dallas Mavericks">Dallas Mavericks</option>
-                <option value="Denver Nuggets">Denver Nuggets</option>
-                <option value="Detroit Pistons">Detroit Pistons</option>
-                <option value="Golden State Warriors">Golden State Warriors</option>
-                <option value="Houston Rockets">Houston Rockets</option>
-                <option value="Indiana Pacers<">Indiana Pacers</option>
-                <option value="Los Angeles Clippers">Los Angeles Clippers</option>
-                <option value="Los Angeles Lakers">Los Angeles Lakers</option>
-                <option value="Memphis Grizzlies">Memphis Grizzlies</option>
-                <option value="Miami Heat">Miami Heat</option>
-                <option value="Milwaukee Bucks">Milwaukee Bucks</option>
-                <option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
-                <option value="New Orleans Pelicans">New Orleans Pelicans</option>
-                <option value="New York Knicks">New York Knicks</option>
-                <option value="Oklahoma City Thunder">Oklahoma City Thunder</option>
-                <option value="Orlando Magic">Orlando Magic</option>
-                <option value="Philadelphia 76ers">Philadelphia 76ers</option>
-                <option value="Phoenix Suns">Phoenix Suns</option>
-                <option value="Portland Trail Blazers">Portland Trail Blazers</option>
-                <option value="Sacramento Kings">Sacramento Kings</option>
-                <option value="San Antonio Spurs">San Antonio Spurs</option>
-                <option value="Toronto Raptors">Toronto Raptors</option>
-                <option value="Utah Jazz">Utah Jazz</option>
-                <option value="Washington Wizards">Washington Wizards</option>
+                <option value="Hawks">Atlanta Hawks</option>
+                <option value="Celtics">Boston Celtics</option>
+                <option value="Nets">Brooklyn Nets</option>
+                <option value="Hornets">Charlotte Hornets</option>
+                <option value="Bulls">Chicago Bulls</option>
+                <option value="Cavaliers">Cleveland Cavaliers</option>
+                <option value="Mavericks">Dallas Mavericks</option>
+                <option value="Nuggets">Denver Nuggets</option>
+                <option value="Pistons">Detroit Pistons</option>
+                <option value="Warriors">Golden State Warriors</option>
+                <option value="Rockets">Houston Rockets</option>
+                <option value="Pacers<">Indiana Pacers</option>
+                <option value="Clippers">Los Angeles Clippers</option>
+                <option value="Lakers">Los Angeles Lakers</option>
+                <option value="Grizzlies">Memphis Grizzlies</option>
+                <option value="Heat">Miami Heat</option>
+                <option value="Bucks">Milwaukee Bucks</option>
+                <option value="Timberwolves">Minnesota Timberwolves</option>
+                <option value="Pelicans">New Orleans Pelicans</option>
+                <option value="Knicks">New York Knicks</option>
+                <option value="Thunder">Oklahoma City Thunder</option>
+                <option value="Magic">Orlando Magic</option>
+                <option value="76ers">Philadelphia 76ers</option>
+                <option value="Suns">Phoenix Suns</option>
+                <option value="Trail Blazers">Portland Trail Blazers</option>
+                <option value="Kings">Sacramento Kings</option>
+                <option value="Spurs">San Antonio Spurs</option>
+                <option value="Raptors">Toronto Raptors</option>
+                <option value="Jazz">Utah Jazz</option>
+                <option value="Wizards">Washington Wizards</option>
             </select>
 
             <p>
-                *2021-22 Season Autofill
+                *2020 Season Autofill
             </p>
                 
                 <div class="row">
@@ -66,17 +66,17 @@
                         <label>
                             2 pointer average
                         </label><br>
-                        <input id="2pointer"><br>
+                        <input id="2pointer">%<br>
                     
                         <label><br>
                             3 pointer average
                         </label><br>
-                        <input id="3pointer"><br>
+                        <input id="3pointer">%<br>
                     
                         <label><br>
                             Freethrow average
                         </label><br>
-                        <input id="freethrow">
+                        <input id="freethrow">%
                     </div>
 
                     <div class="col-md-6">
@@ -91,7 +91,7 @@
                         <input id="rebounds"><br>
                     
                         <label><br>
-                            Stadium attendance
+                            Stadium attendance on average
                         </label><br>
                         <input id="attendance">
                     </div>
@@ -124,8 +124,7 @@
         <a href='https://www.freepik.com/photos/basketball-ball'>Basketball ball photo created by master1305 - www.freepik.com</a>
     </div>
 
-    <script src="../static/js/app.js"></script>
-    <script src="../static/js/player_dropdowns.js"></script>
+    <script src="../static/js/Elements_app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 
 </body>
