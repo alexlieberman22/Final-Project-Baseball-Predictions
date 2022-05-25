@@ -122,3 +122,23 @@ function createOptions(options, element){
 		element.add(opt)
 	})
 }
+
+function autofill_inputs(selection){
+  var team = selection.value;
+  console.log(team);
+
+  d3.json("../static/Resources/teams_2020.json").then((data) => {
+      console.log(data);
+      
+      team_data = data[`${team}`]
+      console.log(team_data);
+
+      document.getElementById('2pointer').value = team_data['2pointer_PCT_AVG'].toPrecision(5)
+      document.getElementById('3pointer').value = team_data['3pointer_PCT_AVG'].toPrecision(5)
+      document.getElementById('freethrow').value = team_data['FreeThrow_PCT_AVG'].toPrecision(5)
+      document.getElementById('assists').value = team_data['Assists_AVG'].toPrecision(5)
+      document.getElementById('rebounds').value = team_data['Rebounds_AVG'].toPrecision(5)
+      document.getElementById('attendance').value = team_data['Attendance'].toPrecision(5)
+
+  })
+}

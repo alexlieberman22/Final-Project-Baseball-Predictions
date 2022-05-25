@@ -1,6 +1,6 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import pandas as pd
-# import joblib
+import joblib
 
 app = Flask(__name__)
 
@@ -8,17 +8,17 @@ app = Flask(__name__)
 def index():
      return render_template("index.html")
 
-@app.route('/predict_1', methods=['GET','POST'])
+@app.route('/predict1', methods=['GET','POST'])
 def predict():
-     # json_ = request.json
-     # query_df = pd.DataFrame(json_)
-     # query = pd.get_dummies(query_df)
-    
+     # json = request.json
+     # querydf = pd.DataFrame(json)
+
      # model = joblib.load('model.pkl')
      # prediction = model.predict(query)
      # return jsonify({'prediction': list(prediction)})
 
-     # Code for select dropdown
+     
+    # Code for select dropdown
      # if request.method == 'POST':
      #      my_json = request.json
      #      number1 = my_json.get("number1")
@@ -33,18 +33,37 @@ def predict():
           number2 = my_dict.get("number2")
           prediction = int(number1) + int(number2)
           return render_template('predict_1.html', prediction=prediction)
-
+        
      return render_template('predict_1.html')
 
-@app.route('/prediction_1', methods=['GET','POST'])
+@app.route('/prediction_teams', methods=['GET','POST'])
 def prediction_1():
 
-     return render_template('prediction_1.html')
+     json = request.json
+     querydf = pd.DataFrame(json)
 
-@app.route('/prediction_2', methods=['GET','POST'])
+     model = joblib.load('Models/Games_OLS.sav')
+     prediction = model.predict(querydf)
+     return jsonify({'prediction_wins': prediction})
+
+
+
+
+     return render_template('prediction_teams.html')
+
+@app.route('/prediction_players', methods=['GET','POST'])
 def prediction_2():
 
-     return render_template('prediction_2.html')
+     # json = request.json
+     # querydf = pd.DataFrame(json)
+
+     # model = joblib.load('model.pkl')
+     # prediction = model.predict(query)
+     # return jsonify({'prediction': prediction})
+
+
+
+     return render_template('prediction_players.html')
 
 if __name__ == '__main__':
      app.run(debug=True)
