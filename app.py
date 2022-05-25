@@ -1,4 +1,3 @@
-
 from flask import Flask, request, render_template, jsonify
 import pandas as pd
 import joblib
@@ -18,13 +17,23 @@ def predict():
      # prediction = model.predict(query)
      # return jsonify({'prediction': list(prediction)})
 
-     if request.method == 'POST':
-          my_json = request.json
-          number1 = my_json.get("number1")
-          number2 = my_json.get("number2")
-          prediction = int(number1) + int(number2)
-          return {"prediction": prediction}
+     
+    # Code for select dropdown
+     # if request.method == 'POST':
+     #      my_json = request.json
+     #      number1 = my_json.get("number1")
+     #      number2 = my_json.get("number2")
+     #      prediction = int(number1) + int(number2)
+     #      return {"prediction": prediction}
 
+     # Code for input form
+     if request.method == 'POST':
+          my_dict = request.form.to_dict()
+          number1 = my_dict.get("number1")
+          number2 = my_dict.get("number2")
+          prediction = int(number1) + int(number2)
+          return render_template('predict_1.html', prediction=prediction)
+        
      return render_template('predict_1.html')
 
 @app.route('/prediction_teams', methods=['GET','POST'])
