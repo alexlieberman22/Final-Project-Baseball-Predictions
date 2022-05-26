@@ -1,6 +1,8 @@
+from cgi import test
 from flask import Flask, request, render_template, jsonify
 import pandas as pd
-import joblib
+import pickle
+import statsmodels.api as sm
 
 app = Flask(__name__)
 
@@ -38,21 +40,26 @@ def prediction_1():
 
      if request.method == 'POST':
           my_dict = request.form.to_dict()
-          # two_pointer = my_dict.get("2pointer")
-          # three_pointer = my_dict.get("3pointer")
-          # freethrow = my_dict.get("freethrow")
-          # assists = my_dict.get("assists")
-          # rebounds = my_dict.get("rebounds")
-          # attendance = my_dict.get("attendance")
+          two_pointer = float(my_dict.get("2pointer"))
+          three_pointer = float(my_dict.get("3pointer"))
+          freethrow = float(my_dict.get("freethrow"))
+          assists = float(my_dict.get("assists"))
+          rebounds = float(my_dict.get("rebounds"))
+          attendance = float(my_dict.get("attendance"))
 
-
-          querydf = pd.DataFrame(my_dict)
-          # print(querydf)
-          # model = joblib.load('Models/Games_OLS.sav')
-          # prediction = model.predict(querydf)
-          # print(prediction)
           
-          return querydf
+
+          columns = ['2pointer_PCT_AVG', '3pointer_PCT_AVG', 'FreeThrow_PCT_AVG', 'Assists_AVG', 'Rebounds_AVG', 'Attendance']
+          test_data = pd.DataFrame([[two_pointer,three_pointer,freethrow,assists,rebounds,attendance]], columns=columns)
+          test_data = sm.add_constant(test_data, has_constant='add')
+          print(test_data)
+          # return test_data.to_json()
+          model = pickle.load(open('Models_Folder_Updated/Models/Games_OLS.sav','rb'))
+          prediction_df = model.predict(test_data)
+          prediction = prediction_df[0]
+          print(prediction)
+          # return {'prediction' : prediction}
+
           return render_template('prediction_teams.html', prediction_wins=prediction)
           # prediction = int(number1) + int(number2)
           # return render_template('predict_1.html', prediction=prediction)
