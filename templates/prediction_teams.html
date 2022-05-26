@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="title">
-        <h1  style="text-align: center;""> 
+        <h1  style="text-align: center;"> 
             Total Wins & Playoffs Predictor
         </h1> 
         <div>
@@ -35,7 +35,7 @@
                 <option value="Pistons">Detroit Pistons</option>
                 <option value="Warriors">Golden State Warriors</option>
                 <option value="Rockets">Houston Rockets</option>
-                <option value="Pacers<">Indiana Pacers</option>
+                <option value="Pacers">Indiana Pacers</option>
                 <option value="Clippers">Los Angeles Clippers</option>
                 <option value="Lakers">Los Angeles Lakers</option>
                 <option value="Grizzlies">Memphis Grizzlies</option>
@@ -107,10 +107,12 @@
                 </div>
             </form>
 
-
+            <br>
             <div style="padding-top: 100px;">
-                {{prediction_wins}}
+                <h2>Predicted Wins is</h2> 
+                <h2>{{prediction_wins}}</h2>
             </div>
+            <br>
             <div style="padding-top: 50px;">
                 {playoffs_prediction}
             </div>
