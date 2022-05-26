@@ -21,6 +21,7 @@
                     <a href="#introduction">Introduction</a>
                     <a href="#prediction">Predictions</a>
                     <a href="#visuals">Historical Data</a>
+                    <a href="#source">Source Data</a>
                     <a href="#ml-model">Machine Learning Model</a>
                 </div>
 
@@ -34,15 +35,14 @@
                     </p>
                 </div>
 
-                <div class="row" style="padding-bottom: 250px">
-                    <h2 id="prediction" style="padding-bottom: 40px">
+                <div class="row" style="padding-bottom: 200px">
+                    <h2 id="prediction" style="padding-bottom: 60px">
                         Predictions
                     </h2>
                     
                     <div>
                         <a class="button" href="/prediction_teams">Total Wins & Playoffs Predictor</a>
                         <a class="button" href="/prediction_players">Player Total Score Predictor</a>
-                        <!-- <a class="button" href="/predict_1">Eduardo Number Adder</a> -->
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@
                     <h2 id="visuals">
                         Historical Data
                     </h2>
-                    <div class='tableauPlaceholder' id='viz1652823119737' style='position: relative; padding-left: 125px;'>
+                    <div class='tableauPlaceholder' id='viz1652823119737' style='position: relative; padding-left: 50px;'>
                         <noscript><a href='#'>
                         <img alt='Story 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NB&#47;NBAtests&#47;Story1&#47;1_rss.png' style='border: none' /></a>
                         </noscript>
@@ -79,11 +79,36 @@
                         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                         vizElement.parentNode.insertBefore(scriptElement, vizElement);
                     </script>
+                </div>
+
+                <div class="row">
+                    <h2 id="source" style="padding-bottom: 20px; padding-top: 80px;">
+                        Source Data
+                    </h2>
+
+                    <a href='https://www.kaggle.com/datasets/nathanlauga/nba-games'>Kaggle: NBA Games</a>
+                    <a href='https://www.kaggle.com/datasets/wyattowalsh/basketball'>Kaggle: NPA Player Attributes</a>
+                    
+                    <p style="text-align: left; padding-top: 40px;">
+                        The majority of our data was sourced from the csv files, as they contained fairly complete (and recent) sets of general NBA data, such as game and player statistics for all seasons
+                        dating back to 2003-04. We started by cleaning up those csv files and running preliminary analyses through a machine learning model. Upon initial review, we thought that we might
+                        benefit from adding more features to see if we could boost our model accuracy. That's when we brought in our second kaggle dataset stored in sqlite. This database included information
+                        regarding the attributes of most of the players in our initial data, such as their height, weight, age, nationality, college or pro team (non-NBA) played for, draft status, etc.<br>
+                        <br>
+                        In addition to the Kaggle data, ESPN.com has a well-organized page containing attendance data for all NBA seasons included in our other datasets, so we decided to scrape from their
+                        website and use that data in our game-based predictions. The data we retrieved included total yearly attendance, as well as home and away attendance averages for each team. After
+                        scraping the attendance data, we were satisfied with the features we had in our datasets.<br>
+                        <br>
+                        Next, we dropped unnecessary columns and began to sort and merge the data according to the predictions we wanted to make. The game data was sorted by season and was
+                        also separated according to playoff games versus regular season games. We did the same with the player data, thus creating playoff and regular season tables for both of our
+                        prediction categories (team-specific and player-specific). We waited to merge in the additional data until after all of the sorting, as the attendance data was already seasonally
+                        separated and the player attributes data is static. With our data compilation completed, we exported it to csv files to be used in our machine learning models.<br>
+                    </p>
 
                 </div>
 
                 <div class="row">
-                    <h2 id="ml-model" style="padding-bottom: 20px; padding-top: 80px;">
+                    <h2 id="ml-model" style="padding-bottom: 40px; padding-top: 60px;">
                         Machine Learning Model
                     </h2>
                     
@@ -162,7 +187,7 @@
         <p style="color: white;">
             Creators: &nbsp; Alex Lieberman, Kevin Flores, Eduardo Perez, Marcos Galarza
         </p>
-        <a href='https://www.freepik.com/photos/basketball-ball'>Basketball ball photo created by master1305 - www.freepik.com</a>
+        <a href="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/basketball-art-print-swoosh-vs-22-takumi-park.jpg">Basketball ball artwork created by takumi park - fineartamerica</a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
