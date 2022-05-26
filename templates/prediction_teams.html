@@ -60,40 +60,41 @@
                 *2020 Season Autofill
             </p>
                 
+            <form action="/prediction_teams" method="POST">
                 <div class="row">
                     <div class="col-md-6">
                    
                         <label>
                             2 pointer average
                         </label><br>
-                        <input id="2pointer">%<br>
+                        <input id="2pointer" name="2pointer">%<br>
                     
                         <label><br>
                             3 pointer average
                         </label><br>
-                        <input id="3pointer">%<br>
+                        <input id="3pointer" name="3pointer">%<br>
                     
                         <label><br>
                             Freethrow average
                         </label><br>
-                        <input id="freethrow">%
+                        <input id="freethrow" name="freethrow">%
                     </div>
 
                     <div class="col-md-6">
                         <label>
                             Assists per game average
                         </label><br>
-                        <input id="assists"><br>
+                        <input id="assists" name="assists"><br>
                     
                         <label><br>
                             Rebounds per game average
                         </label><br>
-                        <input id="rebounds"><br>
+                        <input id="rebounds" name="rebounds"><br>
                     
                         <label><br>
                             Stadium attendance on average
                         </label><br>
-                        <input id="attendance">
+                        <input id="attendance" name="attendance">
                     </div>
 
                 </div>
@@ -104,16 +105,15 @@
                         <input type="submit" value="Calculate">
                     </div>
                 </div>
+            </form>
 
 
             <div style="padding-top: 100px;">
-                {Predicted Total Wins}
+                {{prediction_wins}}
             </div>
             <div style="padding-top: 50px;">
-                {Playoffs Prediction}
+                {playoffs_prediction}
             </div>
-
-
 
     </div>
     
@@ -121,7 +121,7 @@
         <p style="color: white;">
             Creators: &nbsp; Alex Lieberman, Kevin Flores, Eduardo Perez, Marcos Galarza
         </p>
-        <a href='https://www.freepik.com/photos/basketball-ball'>Basketball ball photo created by master1305 - www.freepik.com</a>
+        <a href="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/basketball-art-print-swoosh-vs-22-takumi-park.jpg">Basketball ball artwork created by takumi park - fineartamerica</a>
     </div>
 
     <script src="../static/js/Elements_app.js"></script>
