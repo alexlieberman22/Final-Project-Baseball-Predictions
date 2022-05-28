@@ -56,7 +56,7 @@
             <option value="Washington Wizards">Washington Wizards</option>
         </select>
 
-        <select class="players" id="players" style="width: 220px">
+        <select class="players" id="players" style="width: 220px" onchange="autofill_inputs_players(this)">
             <option hidden>Player Name</option>
         </select>
 
@@ -64,41 +64,58 @@
             *2021-22 Season Autofill
         </p>
 
-        <form action="" method="POST">    
+        <form action="/prediction_players" method="POST">    
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-3">
                
                     <label>
-                        ??
+                        Total Games Played
                     </label><br>
-                    <input id="??"><br>
+                    <input id="games" name="games"><br>
                 
                     <label><br>
-                        ??
+                        Minutes per game
                     </label><br>
-                    <input id="??"><br>
-                
-                    <label><br>
-                        ??
-                    </label><br>
-                    <input id="??">
+                    <input id="min" name="min"><br>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <label>
-                        ??
+                        Assists per game
                     </label><br>
-                    <input id="??"><br>
+                    <input id="assists" name="assists"><br>
+
+                    <label><br>
+                        Rebounds per game
+                    </label><br>
+                    <input id="rebounds" name="rebounds"><br>
+
+                </div>
+
+                <div class="col-md-3">
+                    <label>
+                        2 pointers per game
+                    </label><br>
+                    <input id="2pointer" name="2pointer"><br>
                 
                     <label><br>
-                        ??
+                        Personal Fouls per game
                     </label><br>
-                    <input id="??"><br>
-                
+                    <input id="fouls" name="fouls"><br>
+
+                </div>
+
+                <div class="col-md-3">
+                    <label>
+                        3 pointers per game
+                    </label><br>
+                    <input id="3pointer" name="3pointer"><br>
+
                     <label><br>
-                        ??
+                        FreeThrows per game
                     </label><br>
-                    <input id="??">
+                    <input id="freethrow" name="freethrow"><br>
+
                 </div>
 
             </div>
@@ -119,8 +136,7 @@
         <a href="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/basketball-art-print-swoosh-vs-22-takumi-park.jpg">Basketball ball artwork created by takumi park - fineartamerica</a>
     </div>
 
-    <script src="../static/js/app.js"></script>
-    <script src="../static/js/player_dropdowns.js"></script>
+    <script src="../static/js/Elements_app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 
 </body>

@@ -142,3 +142,27 @@ function autofill_inputs(selection){
 
   })
 }
+
+function autofill_inputs_players(selection){
+  var player = selection.value;
+  console.log(player);
+
+  d3.json("../static/Resources/player_data_2021.json").then((data) => {
+      console.log(data);
+      
+      player_data = data[`${player}`]
+      console.log(player_data);
+
+      document.getElementById('games').value = player_data['GAMES'].toPrecision(2)
+      document.getElementById('min').value = player_data['MIN'].toPrecision(3)
+      document.getElementById('assists').value = player_data['ASSISTS'].toPrecision(3)
+      document.getElementById('rebounds').value = player_data['OFFENSIVE_REBOUNDS'].toPrecision(3)
+      document.getElementById('2pointer').value = player_data['2pointer_PROD'].toPrecision(4)
+      document.getElementById('fouls').value = player_data['PERSONAL_FOULS'].toPrecision(3)
+      document.getElementById('3pointer').value = player_data['3pointer_PROD'].toPrecision(3)
+      document.getElementById('freethrow').value = player_data['FreeThrow_PROD'].toPrecision(3)
+
+  })
+
+}
+
