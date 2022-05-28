@@ -57,7 +57,7 @@
             </select>
 
             <p>
-                *2020-21 Season Autofill
+                *2020 Season Autofill
             </p>
                 
             <form action="/prediction_teams" method="POST">
@@ -109,12 +109,15 @@
 
             <br>
             <div style="padding-top: 100px;">
-                <h2>Predicted Wins is</h2> 
-                <h2>{{prediction_wins}}</h2>
+                <h2>Predicted Wins is:</h2>
+                <br> 
+                <h2 id="predicted_wins">{{prediction_wins}}</h2>
             </div>
             <br>
             <div style="padding-top: 50px;">
-                {playoffs_prediction}
+                <h2>Will they go to Playoffs?</h2>
+                <br> 
+                <h2 id="predicted_wins"> {{isPlayoffs}}</h2>
             </div>
 
     </div>
