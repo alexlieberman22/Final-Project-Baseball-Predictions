@@ -56,7 +56,7 @@ def prediction_1():
           # return test_data.to_json()
           model = pickle.load(open('Models_Folder_Updated/Models/Games_OLS.sav','rb'))
           prediction_df = model.predict(test_data)
-          prediction = prediction_df[0]
+          prediction = int(prediction_df[0])
           print(prediction)
           # return {'prediction' : prediction}
 
