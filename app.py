@@ -39,9 +39,10 @@ def prediction_1():
 
           # Playoff Prediction
 
-          # Import model for playoffs
+          # Import model and scaler for playoffs
           model_playoffs = pickle.load(open('Models Folder (Players and Games)/Models/Best_Games_Logistic Regression Classifier.sav','rb'))
-
+          scaler_playoffs = pickle.load(open('Models Folder (Players and Games)/Models/scaler_for_Logistic_Regression_Classifier.sav','rb'))
+          
           # Add number of wins into playoffs test data
           test_data_df['WINS'] = prediction_wins
 
@@ -50,9 +51,14 @@ def prediction_1():
 
           # Reindex playoffs
           playoffs_test_df=test_data_df.reindex(columns=playoffs_columns)
+          print(playoffs_test_df)
+
+          #Scale playoffs test data
+          playoffs_test_scaled = scaler_playoffs.transform(playoffs_test_df)
 
           # Make prediction using logistic regression model
-          playoffs_prediction_df = model_playoffs.predict(playoffs_test_df)
+          playoffs_prediction_df = model_playoffs.predict(playoffs_test_scaled)
+          print(playoffs_prediction_df)
 
           isPlayoffs = ''
           
