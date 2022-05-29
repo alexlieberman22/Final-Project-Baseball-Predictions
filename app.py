@@ -31,7 +31,7 @@ def prediction_1():
           test_data_ols = sm.add_constant(test_data_df, has_constant='add')
 
           #Import OLS model for number of win
-          model_ols = pickle.load(open('Models Folder (Players and Games)/Models/Games_OLS.sav','rb'))
+          model_ols = pickle.load(open('Models_Folder_Final/Models/Games_OLS.sav','rb'))
 
           #Make Prediction using form data as test data.
           prediction_df = model_ols.predict(test_data_ols)
@@ -40,8 +40,8 @@ def prediction_1():
           # Playoff Prediction
 
           # Import model and scaler for playoffs
-          model_playoffs = pickle.load(open('Models Folder (Players and Games)/Models/Best_Games_Logistic Regression Classifier.sav','rb'))
-          scaler_playoffs = pickle.load(open('Models Folder (Players and Games)/Models/scaler_for_Logistic_Regression_Classifier.sav','rb'))
+          model_playoffs = pickle.load(open('Models_Folder_Final/Models/Best_Games_Logistic Regression Classifier.sav','rb'))
+          scaler_playoffs = pickle.load(open('Models_Folder_Final/Models/scaler_for_Logistic_Regression_Classifier.sav','rb'))
           
           # Add number of wins into playoffs test data
           test_data_df['WINS'] = prediction_wins
@@ -96,7 +96,7 @@ def prediction_2():
           test_data = sm.add_constant(test_data, has_constant='add')
           print(test_data)
           #Import OLS model for number of win
-          model = pickle.load(open('Models Folder (Players and Games)/Models/Players_OLS.sav','rb'))
+          model = pickle.load(open('Models_Folder_Final/Models/Players_OLS.sav','rb'))
 
           #Make Prediction using form data as test data.
           prediction_df = model.predict(test_data)
