@@ -93,7 +93,7 @@ def prediction_2():
           # Add constant for OLS model
           test_data = sm.add_constant(test_data, has_constant='add')
           
-          #Import OLS model for number of win
+          #Import OLS model for total points by player
           model = pickle.load(open('Models_Folder_Final/Models/Players_OLS.sav','rb'))
 
           #Make Prediction using form data as test data.
