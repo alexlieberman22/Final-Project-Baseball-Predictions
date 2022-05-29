@@ -51,14 +51,12 @@ def prediction_1():
 
           # Reindex playoffs
           playoffs_test_df=test_data_df.reindex(columns=playoffs_columns)
-          print(playoffs_test_df)
 
           #Scale playoffs test data
           playoffs_test_scaled = scaler_playoffs.transform(playoffs_test_df)
 
           # Make prediction using logistic regression model
           playoffs_prediction_df = model_playoffs.predict(playoffs_test_scaled)
-          print(playoffs_prediction_df)
 
           isPlayoffs = ''
           
@@ -94,7 +92,7 @@ def prediction_2():
           
           # Add constant for OLS model
           test_data = sm.add_constant(test_data, has_constant='add')
-          print(test_data)
+          
           #Import OLS model for number of win
           model = pickle.load(open('Models_Folder_Final/Models/Players_OLS.sav','rb'))
 
