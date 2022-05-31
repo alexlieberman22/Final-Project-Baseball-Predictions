@@ -133,3 +133,6 @@ config.py
 
 # Add basketball.sqlite
 nba_data/Notebook/basketball.sqlite
+
+# Add ds_store
+.DS_Store

@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="title">
-        <h1  style="text-align: center;""> 
+        <h1  style="text-align: center;"> 
             Player Total Score Predictor
         </h1> 
         <div>
@@ -93,16 +93,17 @@
                 </div>
 
                 <div class="col-md-3">
+                    
                     <label>
-                        2 pointers per game
-                    </label><br>
-                    <input id="2pointer" name="2pointer"><br>
-                
-                    <label><br>
                         Personal Fouls per game
                     </label><br>
                     <input id="fouls" name="fouls"><br>
 
+                    <label><br>
+
+                        2 pointers per game
+                    </label><br>
+                    <input id="2pointer" name="2pointer"><br>
                 </div>
 
                 <div class="col-md-3">
@@ -117,7 +118,6 @@
                     <input id="freethrow" name="freethrow"><br>
 
                 </div>
-
             </div>
 
 
@@ -127,6 +127,20 @@
                 </div>
             </div>
         </form>
+
+        <br>
+        
+        <div id="predicted_total_score" style="padding-top: 50px">
+            <h2>
+                Predicted Total Score: 
+            </h2>
+            <br>
+          
+            <h1>
+                {{prediction_total_score}}
+            </h1>
+
+        </div>
     </div>
 
     <div class="footnotes">

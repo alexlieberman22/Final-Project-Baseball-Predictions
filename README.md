@@ -4,6 +4,9 @@
 Interest in sports betting is growing and using machine learning to predict the results of games will help in sports betting. 
 Our goal is to achieve an accuracy score of higher than 50%.
 
+### Presentation Link:
+[NBA Machine Learning Project - Google Slides](https://docs.google.com/presentation/d/1fVfMzhrjBLZuoqX2h9sObJL0nUd2_X0JM9Z51YIBT4Q/edit?usp=sharing)
+
 ### Source of data:
 
 - [nba-games from Kaggle by wyattowalsh](https://www.kaggle.com/wyattowalsh/basketball)
