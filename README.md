@@ -4,6 +4,9 @@
 Interest in sports betting is growing and using machine learning to predict the results of games will help in sports betting. 
 Our goal is to achieve an accuracy score of higher than 50%.
 
+### Website Link:
+[NBA Predictor](http://alexlieberman22.pythonanywhere.com/)
+
 ### Presentation Link:
 [NBA Machine Learning Project - Google Slides](https://docs.google.com/presentation/d/1fVfMzhrjBLZuoqX2h9sObJL0nUd2_X0JM9Z51YIBT4Q/edit?usp=sharing)
 
@@ -16,7 +19,7 @@ Our goal is to achieve an accuracy score of higher than 50%.
 - CBS sports
 - FanGraphs
 
-###  Questions we hope to answer with the data:
+### Questions we hope to answer with the data:
 
 - Predict outcomes of games
 - Analyze why scores are higher than others
