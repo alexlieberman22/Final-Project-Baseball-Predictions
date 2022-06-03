@@ -91,3 +91,27 @@ Our goal is to achieve an accuracy score of higher than 50%.
 - Second best model is the Random Forest Classifier model
 - Third best model is the Tuned Bagging Classifier model
 
+- We use the Logistic Regression Classifier as the predictive model on the website.
+
+### Second OLS Model:
+
+- A similar process to the feature engineering of the previous dataset to create a seasonal data.
+- The scoring metrics were made into a product to still measure the attempts a player made with the amount scored.
+- The dataframe was merged and grouped into one frame.
+- The data was split into a training and testing set.
+- The features included in the X set.
+
+![image](https://user-images.githubusercontent.com/71575748/171760592-abaec874-af47-4c98-820d-82be32a54ef5.png)
+
+#### Correlation Matrix of the X dataframe.
+
+![image](https://user-images.githubusercontent.com/71575748/171760659-69966bac-8114-418c-873c-7722f1b4bd99.png)
+
+- There is a risk of multicolinearity. We decided to keep the problematic column of minutes played since removing it caused a drastic decrease in R-Squared for the model.
+
+### Finalized OLS model for player data
+
+![image](https://user-images.githubusercontent.com/71575748/171760954-37443113-b376-4008-80d6-1965d577a386.png)
+
+- The model is much stronger than its games won counterpart in terms of R-squared meaning the model can explain more of its residuals
+  - This is because player performance may be more predictable than team performance, or that the number of games played factor strongly to a total number prediction.
